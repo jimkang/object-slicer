@@ -1,5 +1,5 @@
 {
-  "name": "object-get-at-path",
+  "name": "get-at-path",
   "version": "1.0.0",
   "description": "Given an object and a keypath, gets the value at that path. e.g. Get ['countries', 'US', 'states', 'MA', 'cities', 'Somerville'] in an addresses object.",
   "main": "index.js",
