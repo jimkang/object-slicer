@@ -1,20 +1,17 @@
-get-at-path
+object-slicer
 ==================
 
-Given an object and a keypath, gets the value at that path. e.g. Get ['countries', 'US', 'states', 'MA', 'cities', 'Somerville'] in an addresses object.
-
-The sequel to [object-path-exists](https://github.com/jimkang/path-exists).
-
+Slices an object into an array of levels representing the object's hierarchy and also does the reverse.
 
 Installation
 ------------
 
-    npm install get-at-path
+    npm install object-slicer
 
 Usage
 -----
 
-    var getAtPath = require('get-at-path');
+    var { sliceIntoLevels, formFromLevels } = require('object-slicer');
 
     var addresses = {
       countries: {
@@ -24,7 +21,7 @@ Usage
             MA: {
               cities: {
                 Somerville: {
-                  streets: []
+                  streets: ['Elm', 'Highland']
                 }
               }
             }
@@ -38,10 +35,16 @@ Usage
       }
     };
 
-    getAtPath(addresses, ['countries', 'USA', 'states', 'MA', 'cities', 'Somerville'])
-    // { streets: [] }
-    getAtPath(addresses, ['countries', 'Canada', 'states', 'MA', 'cities', 'Somerville'])
-    // undefined
+    var slices = sliceIntoLevels(addresses);
+    console.log(slices);
+
+Console output:
+
+
+
+
+    formFromLevels(slices);
+    // Returns original object 
 
 Tests
 -----

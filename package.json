@@ -1,22 +1,22 @@
 {
-  "name": "get-at-path",
-  "version": "1.0.1",
-  "description": "Given an object and a keypath, gets the value at that path. e.g. Get ['countries', 'US', 'states', 'MA', 'cities', 'Somerville'] in an addresses object.",
+  "name": "object-slicer",
+  "version": "1.0.0",
+  "description": "Slices an object into an array of levels representing the object's hierarchy and also does the reverse.",
   "main": "index.js",
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jimkang/get-at-path.git"
+    "url": "git@github.com:jimkang/object-slicer.git"
   },
   "keywords": [],
   "author": "Jim Kang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jimkang/get-at-path/issues"
+    "url": "https://github.com/jimkang/object-slicer/issues"
   },
-  "homepage": "https://github.com/jimkang/get-at-path",
+  "homepage": "https://github.com/jimkang/object-slicer",
   "devDependencies": {
     "tape": "^4.10.1"
   },
