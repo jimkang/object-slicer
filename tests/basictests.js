@@ -2,8 +2,12 @@ var test = require('tape');
 var sliceIntoLevels = require('../slice-into-levels');
 var reconstitute = require('../reconstitute');
 
+var projects = require('./fixtures/projects');
+var projectsLevels = require('./fixtures/projects-levels');
+
 var testCases = [
   {
+    name: 'Geopolitical hierarchy',
     object: {
       countries: {
         USA: {
@@ -59,17 +63,23 @@ var testCases = [
         { value: 'Highland', arrayIndex: 1, parentIndex: 0 }
       ]
     ]
+  },
+
+  {
+    name: 'Projects',
+    object: projects,
+    expected: projectsLevels
   }
 ];
 
 testCases.forEach(runTest);
 
 function runTest(testCase) {
-  test('Slice and form test', sliceAndFormTest);
+  test(testCase.name, sliceAndFormTest);
 
   function sliceAndFormTest(t) {
     var levels = sliceIntoLevels(testCase.object);
-    console.log('levels:', JSON.stringify(levels, null, 2));
+    //console.log('levels:', JSON.stringify(levels, null, 2));
     t.deepEqual(
       levels,
       testCase.expected,
@@ -77,7 +87,7 @@ function runTest(testCase) {
     );
 
     var hierarchy = reconstitute(levels);
-    console.log('hierarchy:', JSON.stringify(hierarchy, null, 2));
+    //console.log('hierarchy:', JSON.stringify(hierarchy, null, 2));
     t.deepEqual(
       hierarchy,
       testCase.object,
