@@ -1,5 +1,6 @@
 var test = require('tape');
 var sliceIntoLevels = require('../slice-into-levels');
+var reconstitute = require('../reconstitute');
 
 var testCases = [
   {
@@ -64,16 +65,25 @@ var testCases = [
 testCases.forEach(runTest);
 
 function runTest(testCase) {
-  test('Slice test', sliceTest);
+  test('Slice and form test', sliceAndFormTest);
 
-  function sliceTest(t) {
-    var slices = sliceIntoLevels(testCase.object);
-    console.log('slices:', JSON.stringify(slices, null, 2));
+  function sliceAndFormTest(t) {
+    var levels = sliceIntoLevels(testCase.object);
+    console.log('levels:', JSON.stringify(levels, null, 2));
     t.deepEqual(
-      slices,
+      levels,
       testCase.expected,
-      'Object is sliced into level correctly.'
+      'Object is sliced into levels correctly.'
     );
+
+    var hierarchy = reconstitute(levels);
+    console.log('hierarchy:', JSON.stringify(hierarchy, null, 2));
+    t.deepEqual(
+      hierarchy,
+      testCase.object,
+      'Object is reconstituted from levels correctly.'
+    );
+
     t.end();
   }
 }
