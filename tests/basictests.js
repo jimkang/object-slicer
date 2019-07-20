@@ -29,7 +29,7 @@ var testCases = [
       }
     },
     expected: [
-      [{ value: {} }],
+      [{ value: {}, parentIndex: -1 }],
       [{ value: {}, key: 'countries', parentIndex: 0 }],
       [
         { value: {}, key: 'USA', parentIndex: 0 },
@@ -52,13 +52,10 @@ var testCases = [
         { value: {}, key: 'Somerville', parentIndex: 0 },
         { value: {}, key: 'Edmonton', parentIndex: 1 }
       ],
+      [{ value: [], key: 'streets', parentIndex: 0 }],
       [
-        { value: [], key: 'streets', parentIndex: 0 },
-        { value: [], key: 'streets', parentIndex: 1 }
-      ],
-      [
-        { value: 'Elm', index: 0, parentIndex: 0 },
-        { value: 'Highland', index: 1, parentIndex: 0 }
+        { value: 'Elm', arrayIndex: 0, parentIndex: 0 },
+        { value: 'Highland', arrayIndex: 1, parentIndex: 0 }
       ]
     ]
   }
@@ -71,6 +68,7 @@ function runTest(testCase) {
 
   function sliceTest(t) {
     var slices = sliceIntoLevels(testCase.object);
+    console.log('slices:', JSON.stringify(slices, null, 2));
     t.deepEqual(
       slices,
       testCase.expected,

@@ -1,5 +1,5 @@
 test:
-	node tests/slice-tests.js
+	node tests/basictests.js
 
 pushall:
 	git push origin master && npm publish

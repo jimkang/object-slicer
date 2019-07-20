@@ -1,13 +1,5 @@
-function getAtPath(object, path) {
-  var current = object;
-  if (path.every(segmentExists, true)) {
-    return current;
-  }
+var sliceIntoLevels = require('./slice-into-levels');
 
-  function segmentExists(segment) {
-    current = current[segment];
-    return current;
-  }
-}
-
-module.exports = getAtPath;
+module.exports = {
+  sliceIntoLevels
+};
