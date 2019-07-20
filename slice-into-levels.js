@@ -43,6 +43,15 @@ function sliceIntoLevels(
       for (let k in value) {
         sliceIntoLevels(value[k], levels, levelIndex + 1, level.length, -1, k);
       }
+      let symbolKeys = Object.getOwnPropertySymbols(value);
+      for (
+        let symbolIndex = 0;
+        symbolIndex < symbolKeys.length;
+        ++symbolIndex
+      ) {
+        let k = symbolKeys[symbolIndex];
+        sliceIntoLevels(value[k], levels, levelIndex + 1, level.length, -1, k);
+      }
     }
   }
 
