@@ -4,7 +4,6 @@ var reconstitute = require('../reconstitute');
 var getAtPath = require('get-at-path');
 
 var layoutDef = require('tablenest/tests/fixtures/layout-def');
-//var layoutDefLevels = require('./fixtures/layout-def-levels');
 
 var testCases = [
   {

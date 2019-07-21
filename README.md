@@ -3,6 +3,13 @@ object-slicer
 
 Slices an object into an array of levels representing the object's hierarchy and also does the reverse.
 
+Why
+---
+
+When writing programs that work recursively on an object's properties, like [tablenest](https://github.com/jimkang/tablenest), modifications become difficult. This is in part because it is hard to inspect an object with deep nesting at an intermediate stage of the program. It's hard to know what parts of the object it should be working on at a given point.
+
+Intermediate representations of the deeply nested object can help with this. So this module represents levels of depth in a nest object as arrays. The successor to [tablenest](https://github.com/jimkang/tablenest) can iterate over one level at a time, and when debugging, I will know what to inspect.
+
 Installation
 ------------
 

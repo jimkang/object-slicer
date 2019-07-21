@@ -2,10 +2,6 @@ var test = require('tape');
 var sliceIntoLevels = require('../slice-into-levels');
 var reconstitute = require('../reconstitute');
 
-//var layoutDef = require('../../tablenest/tests/fixtures/layout-def');
-//var layoutDefLevels = require('./fixtures/layout-def-levels');
-//
-
 const coyoteSymbol = Symbol('coyote');
 const fishSymbol = Symbol('fish');
 const amphibianSymbol = Symbol('amphibian');
