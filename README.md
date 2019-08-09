@@ -47,105 +47,105 @@ Usage
 
 Console output:
 
-		[
-			[
-				{
-					"value": {},
-					"parentIndex": -1
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "countries"
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "USA"
-				},
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "Canada"
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "states"
-				},
-				{
-					"value": {},
-					"parentIndex": 1,
-					"key": "provinces"
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "IL"
-				},
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "MA"
-				},
-				{
-					"value": {},
-					"parentIndex": 1,
-					"key": "Alberta"
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 1,
-					"key": "cities"
-				},
-				{
-					"value": {},
-					"parentIndex": 2,
-					"key": "cities"
-				}
-			],
-			[
-				{
-					"value": {},
-					"parentIndex": 0,
-					"key": "Somerville"
-				},
-				{
-					"value": {},
-					"parentIndex": 1,
-					"key": "Edmonton"
-				}
-			],
-			[
-				{
-					"value": [],
-					"parentIndex": 0,
-					"key": "streets"
-				}
-			],
-			[
-				{
-					"value": "Elm",
-					"parentIndex": 0,
-					"arrayIndex": 0
-				},
-				{
-					"value": "Highland",
-					"parentIndex": 0,
-					"arrayIndex": 1
-				}
-			]
-		]
+    [
+      [
+        {
+          "value": {},
+          "parentIndex": -1
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "countries"
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "USA"
+        },
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "Canada"
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "states"
+        },
+        {
+          "value": {},
+          "parentIndex": 1,
+          "key": "provinces"
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "IL"
+        },
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "MA"
+        },
+        {
+          "value": {},
+          "parentIndex": 1,
+          "key": "Alberta"
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 1,
+          "key": "cities"
+        },
+        {
+          "value": {},
+          "parentIndex": 2,
+          "key": "cities"
+        }
+      ],
+      [
+        {
+          "value": {},
+          "parentIndex": 0,
+          "key": "Somerville"
+        },
+        {
+          "value": {},
+          "parentIndex": 1,
+          "key": "Edmonton"
+        }
+      ],
+      [
+        {
+          "value": [],
+          "parentIndex": 0,
+          "key": "streets"
+        }
+      ],
+      [
+        {
+          "value": "Elm",
+          "parentIndex": 0,
+          "arrayIndex": 0
+        },
+        {
+          "value": "Highland",
+          "parentIndex": 0,
+          "arrayIndex": 1
+        }
+      ]
+    ]
 
     reconstitute(levels);
     // Returns original object 
